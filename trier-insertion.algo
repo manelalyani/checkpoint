@@ -1,0 +1,18 @@
+ALGORITHM trier-insertion
+VAR
+temp:integer;
+i,j: integer;
+tab:ARRAY_OF integer;
+BEGIN
+i:=0;
+
+WHILE (i>=0) DO
+temp:=tab[i];
+WHILE (j>=0 AND tab[j]>temp) DO
+tab[j+1]:=tab[j];
+j:=j-1
+END_WHILE
+tab[j]:=temp;
+i:=i+1  
+END_WHILE
+END
